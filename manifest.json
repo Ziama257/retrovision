@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Y2K Style Extension",
+    "version": "1.0",
+    "description": "Transforms websites into an early 2000s style",
+    "permissions": ["activeTab"],
+    "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+    },
+    "content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"],
+        "run_at": "document_end"
+    }
+    ]
+}
